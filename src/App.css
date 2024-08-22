@@ -48,4 +48,18 @@ div{
   grid-column: span;
   text-align: center;
 } */
-
+.hii{
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  padding: 20px;
+}
+.h{
+  align-content: center;
+  text-align: center;
+}
+.field,.selectionFeild{
+  display: flex;
+  flex-direction: column;
+}

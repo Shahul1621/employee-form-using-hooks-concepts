@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import './App.css'
 
  function FormFeild({lableName= "Name", placeHol="Name" , req = "Name" , type = "text"}){
   const [val, setVal] = useState(" ");
@@ -7,7 +8,7 @@ import {useState} from 'react';
    }
 
   return(
-    <div>
+    <div className='field'>
        <label>{lableName}</label>
       <input type={type} placeholder={"Enter your "+ placeHol} value={val} onChange={(e)=>updateVal(e.target.value)} />
       {val === "" && <div>{req} is Required</div>}
@@ -28,8 +29,10 @@ import {useState} from 'react';
 
 export default function App(){
   return(
-    <div>
-      <h1>Employee</h1>
+    <>
+          <h1>Employee</h1>
+
+    <div className='hii'>
          <FormFeild lableName="First Name" placeHol = "First Name" req = "First Name" />
          <FormFeild lableName="Middle Name" placeHol = "Middle Name" req = "Middle Name" />
          <FormFeild lableName="Last Name" placeHol = "Last Name" req = "Last Name" />
@@ -43,7 +46,11 @@ export default function App(){
          <SelectionFeild lableName="Select Teams" options={["A","B","C"]}/>
          <SelectionFeild lableName="Designations" options={["Select","Student","Staff","Administrator", "Office-Worker"]}/>
          <FormFeild lableName="Billable Hours" placeHol = 'billable hours' req = "Billable Hours"  />
-         <button>submit</button>
+         <br></br>
     </div>
+    <div className='h'>
+    <button>submit</button>
+    </div>
+    </>
   )
 }
